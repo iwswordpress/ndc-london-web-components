@@ -6,7 +6,8 @@ template.innerHTML = `
     <div class="container">
         <h1>LOGIN FORM</h1>
         <p>Uses a WordPress REST API to check login details and returns a success/fail message with UserId and JSON WEB TOKEN.</p>
-        <p>Use email: <b>demo2@49plus.co.uk</b> and password: <b>demo2</b></p>
+        <p>Use any valid email address and password of 5 characters or more.</p>
+        <p>Generates a JWT based on these credentials.</p>
         <p><span class="req">*</span> denotes required</p>
         <!-- ********************************************  FORM ***********************************  -->
         <form id="myForm">
@@ -91,7 +92,8 @@ class WPLogin extends HTMLElement {
             // display in component
             self.showResult(data.token);
             console.log('JWT = ' + data.token);
-            console.log('CUSTOM EVENT emitted');
+            console.log('CUSTOM EVENT emitted...');
+            console.log(data);
             //window.location.href = "https://49 plus.co.uk/abob/";
           })
           .finally(function () {
