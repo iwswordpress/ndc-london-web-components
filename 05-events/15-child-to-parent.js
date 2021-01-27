@@ -1,10 +1,13 @@
 const template = document.createElement('template');
 template.innerHTML = `
     <style>
+      :host {
+        background:linen;
+      }
       button {
         display: block;
         padding: 12px;
-        width: 300px;
+        width: 400px;
         font-size:1.2rem;
         color:white;
         background:#2196f3;
@@ -27,8 +30,9 @@ class ChildOne extends HTMLElement {
     btn.addEventListener('click', e => {
       console.log('[CHILD ONE JS] +++++ CLICK START +++++');
       console.log(e);
-      const eventData =
-        'DATA SENT IN CUSTOM EVENT ' + Math.floor(Math.random() * 1000);
+      const rnd = Math.floor(Math.random() * 1000);
+      const eventData = 'DATA SENT IN CUSTOM EVENT ' + rnd;
+      this.shadowRoot.getElementById('btn').innerHTML = eventData;
       // ++++++++++ CUSTOM EVENTS ++++++++++
       this.dispatchEvent(
         new CustomEvent('childOneClick', {

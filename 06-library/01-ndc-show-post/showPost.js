@@ -69,9 +69,9 @@ class ShowPost extends HTMLElement {
         info.innerHTML = '<h3>URL: ' + url + '</h3>';
         output += '<div class="card">';
         output +=
-          'PostID: <b>' +
+          '<h1>PostID: <b>' +
           data.id +
-          '</b><br> Title: <b>' +
+          '</b></h1><br> Title: <b>' +
           data.title.rendered +
           '</b><br> Author: ';
         output += '<b>' + data.authorName.toUpperCase() + '</b><br>';
