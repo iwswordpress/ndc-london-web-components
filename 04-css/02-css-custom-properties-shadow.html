@@ -34,7 +34,7 @@
             constructor() {
                 super(); // always call super() first in the constructor.
 
-                // Attach a shadow root to <fancy-tabs>.
+                // Attach a shadow root to <my-component>.
                 const shadowRoot = this.attachShadow({mode: 'open'});
                 shadowRoot.innerHTML = `
                     <style>
@@ -48,6 +48,7 @@
                             width: 600px;
                             margin-bottom:20px;
                             font-family: inherit;
+                            background: linen;
                         }
                         slot {
                             color: purple
@@ -65,8 +66,9 @@
                     <h1>css-02-custom-properties-shadow</h1>
                     <p>We can pass in CSS custom properties into the SHADOW DOM.</p>
                     <p>This means we can have default styles in the component and they can be overwritted by page level CSS custom properites</p>
-        
-                   
+                    <h3>The Shadow Dom CSS has div styled with {background: linen} but does not affect Light DOM.</h3>
+                    <!-- Regular DIV not affected by background of Shado DOM background css -->
+                    <div><h1 style="color:red">This regular DIV element not affected...</h1></div>
                 </div> 
                 <div class="spacer"></div>
                 <div id="output">
