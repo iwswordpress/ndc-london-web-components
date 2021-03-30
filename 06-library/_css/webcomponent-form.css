@@ -26,7 +26,6 @@
    border: 2px solid #ccc;
    padding: 25px;
    border-radius: 10px;
-
 }
 
 p {
@@ -39,7 +38,6 @@ label {
    font-size: var(--main-font-size, 22px);
    color: #2196f3;
    font-family: var(--main-font, 'Quicksand');
-
 }
 
 span.req {
@@ -56,18 +54,15 @@ textarea {
    width: 100%;
 }
 
-
-
 .input-initial {
    outline: none;
    border: 3px solid #ccc;
    border-radius: 10px;
-
 }
 
 .input-success {
    background-color: #ffffff;
-   background-image: url("https://49plus.co.uk/udemy-webcomponents/_images/icon-tick.jpg");
+   /* background-image: url("https://wp-html.co.uk/api"); */
    background-size: 35px 35px;
    background-position: right center;
    background-repeat: no-repeat;
@@ -79,7 +74,7 @@ textarea {
 
 .input-error {
    background-color: #ffffff;
-   background-image: url("https://49plus.co.uk/udemy-webcomponents/_images/cross.png");
+   /* background-image: url("https://wp-html.co.uk/api"); */
    background-size: 35px 35px;
    background-position: right center;
    background-repeat: no-repeat;
@@ -106,7 +101,6 @@ p span.req {
    border-radius: 15px;
    outline: none;
    background-color: #2196f3;
-   ;
 }
 
 #formMessage {
